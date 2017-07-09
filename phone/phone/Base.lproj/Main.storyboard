@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PhoneVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="phoneVC" customModule="phone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sXT-A1-SXx">
+                                <rect key="frame" x="65" y="176" width="244" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="14o-OQ-xvu"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgV-16-1zh">
+                                <rect key="frame" x="169" y="318" width="36" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NSs-j4-bBW"/>
+                                    <constraint firstAttribute="width" constant="36" id="nr7-6T-Vhl"/>
+                                </constraints>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendbtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z5X-DK-720"/>
+                                    <segue destination="qBW-L8-uz7" kind="showDetail" id="cwd-bS-DJq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hgV-16-1zh" secondAttribute="bottom" constant="319" id="7TK-VU-sW1"/>
+                            <constraint firstAttribute="trailing" secondItem="sXT-A1-SXx" secondAttribute="trailing" constant="66" id="WrR-Vd-KIB"/>
+                            <constraint firstItem="sXT-A1-SXx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="156" id="XhF-vI-KHp"/>
+                            <constraint firstItem="sXT-A1-SXx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="65" id="c7v-sM-cOs"/>
+                            <constraint firstItem="hgV-16-1zh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="169" id="tVI-H9-b15"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="send" destination="hgV-16-1zh" id="JUp-ju-S7Y"/>
+                        <outlet property="txtfield" destination="sXT-A1-SXx" id="yxp-54-pHU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+        <!--VerifyVC-->
+        <scene sceneID="6Sg-Hg-V5i">
+            <objects>
+                <viewController id="qBW-L8-uz7" customClass="verifyVC" customModule="phone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c7e-pX-0PW"/>
+                        <viewControllerLayoutGuide type="bottom" id="bZL-KZ-DAk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="czB-oy-EGT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z7h-F5-PEr">
+                                <rect key="frame" x="52" y="173" width="270" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Eoq-Rg-29S"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bp0-js-urJ">
+                                <rect key="frame" x="175" y="318" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9ST-Bh-QFk"/>
+                                    <constraint firstAttribute="width" constant="40" id="yOa-6s-bCD"/>
+                                </constraints>
+                                <state key="normal" title="Verify"/>
+                                <connections>
+                                    <action selector="verifybtn:" destination="qBW-L8-uz7" eventType="touchUpInside" id="4Ml-ZO-ysP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bZL-KZ-DAk" firstAttribute="top" secondItem="Bp0-js-urJ" secondAttribute="bottom" constant="319" id="A3T-97-ill"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z7h-F5-PEr" secondAttribute="trailing" constant="37" id="AvU-Jb-fCH"/>
+                            <constraint firstItem="z7h-F5-PEr" firstAttribute="top" secondItem="c7e-pX-0PW" secondAttribute="bottom" constant="153" id="Oh8-7C-GBe"/>
+                            <constraint firstItem="z7h-F5-PEr" firstAttribute="leading" secondItem="czB-oy-EGT" secondAttribute="leadingMargin" constant="36" id="vo0-6J-GG5"/>
+                            <constraint firstItem="Bp0-js-urJ" firstAttribute="leading" secondItem="czB-oy-EGT" secondAttribute="leading" constant="175" id="xT0-kL-5Og"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtfield" destination="z7h-F5-PEr" id="d5H-hu-tW1"/>
+                        <outlet property="verify" destination="Bp0-js-urJ" id="P75-sj-KNd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dNd-TE-NGT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="816.79999999999995" y="123.68815592203899"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5Se-lT-5hO">
+            <objects>
+                <viewController id="JEB-ji-dQX" customClass="ViewController" customModule="phone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hib-5M-vZW"/>
+                        <viewControllerLayoutGuide type="bottom" id="v1c-j8-0So"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WCd-QD-stF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qsb-25-txS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1484" y="124"/>
+        </scene>
+    </scenes>
+</document>
